@@ -2,7 +2,9 @@
 Intended to be practice for using Rails as an API to talk to backbone.js frontend
 
 Ruby on Rails 4.2.3 (API)
+
 backbone.js (client, frontend)
+
 ruby -version 2.0.0p353
 
 
@@ -13,14 +15,43 @@ Initiation
 
 
 USER STORY
-- Admin can log-in
+- Admin can login
 - Admin can create a new subject note page
+
   + Page is posted to database
+
   + Page can be deleted by admin
 
 - Guest can enter and post notes on note page
+
   + Page is updated in database
 
 
 
 <tt>Technical Project by Andrew Pham</tt>.
+
+
+Project Road Map
+- admin login redirect to Create subject page
+- guest redirect to all Subjects page
+- create Subject model that has_many notes
+- create Note model that belongs_to Subject
+
+backbone.js
+- Base view: page that displays all of the subjects. (redirects to subject/id)
+- Subject view: will show all notes associated with Subject
+- Note view (rendered in Subject view): show the content of the note.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
