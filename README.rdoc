@@ -1,28 +1,26 @@
-== README
+== Twigs
+Intended to be practice for using Rails as an API to talk to backbone.js frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby on Rails 4.2.3 (API)
+backbone.js (client, frontend)
+ruby -version 2.0.0p353
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Initiation
+- be rake db:create db:migrate db:seed
+- rails server
+- open index.html in browser
+
+
+USER STORY
+- Admin can log-in
+- Admin can create a new subject note page
+  + Page is posted to database
+  + Page can be deleted by admin
+
+- Guest can enter and post notes on note page
+  + Page is updated in database
+
+
+
+<tt>Technical Project by Andrew Pham</tt>.
