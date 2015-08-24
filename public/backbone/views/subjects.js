@@ -1,6 +1,8 @@
 var SubjectItemView = Backbone.View.extend({
   tagName: 'div',
-  template: _.template("<%= title %>"),
+  className: "hook-subject-name debug",
+  // template: _.template("<%= title %>"),
+  template: _.template( $('#subject-template').html()),
 
   initialize: function(passedModel){
     return this.model = passedModel.model;
@@ -13,10 +15,9 @@ var SubjectItemView = Backbone.View.extend({
 })
 
 
-
 // Display each SubjectViewItem
 app.Views.SubjectListView = Backbone.View.extend({
-  el: '#sub_list',
+  el: '#sub-list',
 
   initialize: function(){
     this.listenTo(this.collection, 'sync', this.render)

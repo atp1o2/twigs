@@ -13,3 +13,7 @@ $(document).ready(function() {
   })
   return app.subjects.fetch();
 });
+
+
+// app needs to be in each field bc the listTo method
+// is listening to all of the 'app's changes to sync
