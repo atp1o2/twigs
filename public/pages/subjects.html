@@ -1,6 +1,7 @@
 <html>
 <head>
   <title>TWIGS</title>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore.js"></script>
@@ -12,13 +13,19 @@
 <h2 class='debug'>Subjects</h2>
 
 
-  <div id="list" class='debug'>
-  </div>
+<div id="list" class='debug'>
+  <form id="new-subject" action="http://localhost:3000/subjects" method="post">
+    <input type="text" placeholder="New Subject" name="title">
+    <input type="submit" value="Create" id="new-subject">
+  </form>
+</div>
+
+
 
 <!-- templates -->
 <!-- for subject link -->
 <script type="text/template" id="subject-template">
-  <a class="s-link" href="/subjects/<%= id %>/notes"> <%= title %> </a>
+<a class="s-link" href="http://localhost:3000/subjects/<%= id %>/notes"><div class='hook-subject-name'><%= title %></div> </a>
 </script>
 
 
@@ -26,6 +33,8 @@
 </div>
 
 <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/application.js"></script>
 <!-- subjects -->
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/views/subjects.js"></script>
