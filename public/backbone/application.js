@@ -10,9 +10,7 @@ window.app = {
 
 $(document).ready(function() {
   app.subjects = new app.Collections.SubjectList;
-  app.subjectListView = new app.Views.SubjectListView({
-    collection: app.subjects
-  })
+  app.subjectListView = new app.Views.SubjectListView({ collection: app.subjects })
 
   return app.subjects.fetch();
 

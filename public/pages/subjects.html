@@ -12,13 +12,13 @@
 <h2 class='debug'>Subjects</h2>
 
 
-  <div id="sub-list" class='debug'>
+  <div id="list" class='debug'>
   </div>
 
 <!-- templates -->
 <!-- for subject link -->
 <script type="text/template" id="subject-template">
-  <a class="s-link" href="http://localhost:3000/subjects/<%= id %>/notes"> <%= title %> </a>
+  <a class="s-link" href="/subjects/<%= id %>/notes"> <%= title %> </a>
 </script>
 
 
@@ -27,8 +27,13 @@
 
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/application.js"></script>
+<!-- subjects -->
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/views/subjects.js"></script>
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/models/subjects.js"></script>
+<!-- notes -->
+<script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/views/notes.js"></script>
+<script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/models/notes.js"></script>
+
 
 </body>
 </html>

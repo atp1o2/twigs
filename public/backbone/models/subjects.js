@@ -1,6 +1,6 @@
 app.Models.Subject = Backbone.Model.extend({
   defaults: {
-    content: 'null'
+    title: 'null'
   }
 });
 
