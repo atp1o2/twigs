@@ -9,16 +9,31 @@
 <body>
 <div id='container'>
 
-<h1>Twigs</h1>
-<h2>Subjects</h2>
+<h2 class='debug'>Subjects</h2>
 
-<ul id="sub_list">
-<!-- insert subject titles here -->
-</ul>
 
+  <div id="list" class='debug'>
+  </div>
+
+<!-- templates -->
+<!-- for subject link -->
+<script type="text/template" id="subject-template">
+  <a class="s-link" href="/subjects/<%= id %>/notes"> <%= title %> </a>
+</script>
+
+
+
+</div>
+
+<link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/application.js"></script>
+<!-- subjects -->
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/views/subjects.js"></script>
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/models/subjects.js"></script>
-</div>
+<!-- notes -->
+<script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/views/notes.js"></script>
+<script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/models/notes.js"></script>
+
+
 </body>
 </html>
