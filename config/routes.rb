@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # for cross origin domains
   match '*any' => 'application#options', :via => [:options]
 
+
+
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

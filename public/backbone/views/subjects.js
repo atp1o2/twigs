@@ -1,6 +1,6 @@
-var SubjectItemView = Backbone.View.extend({
-  tagName: 'div',
-  className: "hook-subject-name debug",
+var SubjectModelView = Backbone.View.extend({
+  // tagName: 'div',
+  // className: "hook-subject-name debug random-color",
   // template: _.template("<%= title %>"),
   template: _.template( $('#subject-template').html()),
   initialize: function(passedModel){
@@ -14,7 +14,7 @@ var SubjectItemView = Backbone.View.extend({
 
 
 // Display each SubjectViewItem
-app.Views.SubjectListView = Backbone.View.extend({
+app.Views.SubjectCollectionView = Backbone.View.extend({
   el: '#list',
   initialize: function(){
     this.listenTo(this.collection, 'sync', this.render)
@@ -24,30 +24,31 @@ app.Views.SubjectListView = Backbone.View.extend({
   },
   showNotes: function(event){
     event.preventDefault();
-    // need a better selector
     var url = $('a').attr('href')
 
     Backbone.ajax({
       url: url,
-      data: "",
       success: function(response){
-        // UNFINISHED
         var list = $('#list')
-        // list.html("")
-        // only returning first <a> url
+        list.html("")
 
-        app.notes = new app.Collections.NoteList({url: url})
-        app.noteListView = new app.Views.NoteListView({ collection: app.notes })
-        return app.notes.fetch();
-        // console.log(app.noteListView)
+        for(var i=1; i<=6; i++){
+          list.append("<div class='hook-note random-color'> NOTES GO HERE </div>")
+        }
+        list.append("<button> Post Note </button>")
+        list.append("<form><input type='submit' value='Back to Subjects'></form>")
+        // app.notes = new app.Collections.NoteList({url: url})
+        // app.noteListView = new app.Views.NoteListView({ collection: app.notes })
+        // return app.notes.fetch();
       }
     })
   },
+
   render: function(){
     var models_array = this.collection.models;
     for(var i=0; i < models_array.length; i++ ){
-      var subjectItemView = new SubjectItemView({ model: models_array[i] });
-      this.$el.append(subjectItemView.render().el);
+      var subjectModelView = new SubjectModelView({ model: models_array[i] });
+      this.$el.append(subjectModelView.render().el);
     }
   }
 })

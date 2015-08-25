@@ -1,4 +1,4 @@
-var NoteView = Backbone.Model.extend({
+var NoteModelView = Backbone.Model.extend({
   tagName: 'div',
   className: 'hook-note',
   template: _.template("<%= content %>"),
@@ -13,8 +13,6 @@ var NoteView = Backbone.Model.extend({
 })
 
 
-
-
 app.Views.NoteListView = Backbone.View.extend({
   el: '#list',
 
@@ -26,8 +24,8 @@ app.Views.NoteListView = Backbone.View.extend({
   render: function(){
     var models_array = this.collection.models;
     for(var i=0; i < models_array.length; i++){
-      var noteView = new NoteView({ model: models_array[i] });
-      this.$el.append(noteView.render().el);
+      var noteModelView = new NoteModelView({ model: models_array[i] });
+      this.$el.append(noteModelView.render().el);
     }
   }
 })
