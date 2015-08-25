@@ -23,6 +23,24 @@ app.Views.SubjectListView = Backbone.View.extend({
     this.listenTo(this.collection, 'sync', this.render)
   },
 
+  events: {
+    'click a': 'showNotes'
+  },
+
+  showNotes: function(event){
+    event.preventDefault();
+    Backbone.ajax({
+      url: $('a').attr('href'),
+      data: "",
+      success: function(response){
+        console.log("Hello from events")
+        var subList = $('#sub-list')
+        subList.html("")
+        subList.append("<div>hi!!</div>")
+      }
+    })
+  },
+
   render: function(){
     var models_array = this.collection.models;
     for(var i=0; i < models_array.length; i++ ){

@@ -20,3 +20,10 @@ debug { border: 1px red solid; }
 #container {
   margin-left: 10em;
 }
+
+.hook-subject-name {
+  height: 5em;
+  width: 20em;
+  border: 1px black solid;
+  text-align: center;
+}

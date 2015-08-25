@@ -9,25 +9,22 @@
 <body>
 <div id='container'>
 
-<h1 class='debug'>Twigs</h1>
 <h2 class='debug'>Subjects</h2>
 
 
   <div id="sub-list" class='debug'>
-
-
   </div>
-
 
 <!-- templates -->
 <!-- for subject link -->
 <script type="text/template" id="subject-template">
-  <a href="http://localhost:3000/subject/<%= id %>"> <%= title %> </a>
+  <a class="s-link" href="http://localhost:3000/subjects/<%= id %>/notes"> <%= title %> </a>
 </script>
 
 
 
 </div>
+
 <link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/application.js"></script>
 <script type="text/javascript" src="/Users/apprentice/Desktop/twigs/public/backbone/views/subjects.js"></script>
